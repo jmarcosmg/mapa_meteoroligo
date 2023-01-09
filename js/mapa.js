@@ -1,10 +1,16 @@
-setTimeout(()=> {
-var lat = document.querySelector("#lat"),
-    long = document.querySelector("#long");
+var ChaveApi = "35a89d92019386407ade61fbe16452ec",
+    url = new URLSearchParams(window.location.search),
+    lat = url.get("lat"),
+    long = url.get("lon");
+
+if (lat == null || long == null) {
+  lat = "-16.73";
+  long = "-43.86";
+}
 
 
 let map = L.map('mapa', {scrollWheelZoom: true
-   }).setView([lat.innerText, longitude.innerText], 12);
+   }).setView([lat, long], 12);
 // Tile type: openstreetmap normal
 var openstreetmap = L.tileLayer(
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -49,4 +55,3 @@ L.control.layers(allOptions).addTo(map);
 // let ourCustomIcon = L.icon(iconOption);
 
 
-}, 1000);

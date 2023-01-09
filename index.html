@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title>Mapa meteorológico com javascript</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
@@ -29,15 +28,18 @@
 </header>
 <main>
   <div class="container">
+    <h1 class="text-center text-white text-uppercase title">Clima agora em <span id="cidade"></span></h1>
     <div class="row">
-      <div class="col-lg-6">
-        <h3>Clima agora em <span id="cidade">Montes Claros</span></h3>
+      <div class="col-lg-6 dados">
+        
         <div class="row">
-        <div class="col-6 temp">Temp. <img id="icone" src="">: <span id="temp"></span>° C</div>
-        <div class="col-6 temp">Press. <i class="fa-solid fa-earth-americas"></i> <span id="pressao"></span>MB</div>
-        <div class="col-6 temp">Umid. <i class="fa-solid fa-droplet"></i>: <span id="umidade"></span>%</div>
-        <div class="col-6 temp">Visb. <i class="fa-solid fa-eye"></i>: <span id="visibilidade"></span>KM</div>
-        <div class="col-12 temp"><i class="fa-sharp fa-solid fa-map-location-dot"></i>: Lat. <span id="lat"></span> Long: <span id="long"></span></div>
+        <div class="col-6 temp clima centro"><img id="icone" src=""> <span id="temp"></span>° C</div>
+        <div class="col-6 temp centro"> <span id="description"></span></div>
+        <div class="col-4 temp">Pressão:<br> <i class="fa-solid fa-earth-americas"></i> <span id="pressao"></span>MB</div>
+        <div class="col-4 temp">Umidade:<br> <i class="fa-solid fa-droplet"></i> <span id="umidade"></span>%</div>
+        <div class="col-4 temp">Visibilidade:<br> <i class="fa-solid fa-eye"></i> <span id="visibilidade"></span>KM</div>
+        <div class="col-6 temp">Vento:<br> <img id="vento" src="img/vento.svg"> <span id="velocidade"></span> KM/H</div>
+        <div class="col-6 temp"><i class="fa-sharp fa-solid fa-map-location-dot"></i>: Lat. <span id="lat"></span><br> Long: <span id="long"></span></div>
       </div>
     </div>
       <div class="col-lg-6">

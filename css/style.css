@@ -3,11 +3,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background: #440076;
 }
 
 #mapa {
     width: 100%;
     height: 50vh;
+    border-radius: 10px;
 }
 
 #sugestao {
@@ -46,7 +48,7 @@ body {
 
 .temp {
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 20px;
 }
 
@@ -61,3 +63,45 @@ body {
     align-items: center;
     flex-wrap: nowrap;
 }
+
+.title {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.dados {
+    background: url(../img/lightning-gc513bbb1d_640.jpg);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 25px;
+}
+
+.dados:before {
+    content: "";
+    background: #000000a6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.clima {
+    font-size: 35px;
+}
+
+#description {text-transform: capitalize;}
+
+.centro {
+    display: flex;
+    align-items: center;
+}
+
+#vento {
+    width: 15px;
+}   
