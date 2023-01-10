@@ -13,32 +13,24 @@ if (cidade == null) {
   cidade = "Montes Claros - MG";
 }
 
-  var requisicaoJson = "https://api.openweathermap.org/data/2.5/weather?units=metric&lang=pt&lat="+latitude+"&lon="+longitude+"&appid="+ChaveApi,
-      latitude = document.getElementById('lat'),
-      longitude = document.getElementById('long'),
-      visibilidade = document.getElementById('visibilidade'),
-      velocidade = document.getElementById('velocidade'),
-      vento = document.getElementById('vento'),
-      umidade = document.getElementById('umidade'),
-      description = document.getElementById('description'),
-      pressao = document.getElementById('pressao'),
-      temperatura = document.getElementById('temp'),
-      local = document.getElementById('cidade'),
-      icone = document.getElementById('icone');
+
+  var requisicaoJson = "https://api.openweathermap.org/data/2.5/weather?units=metric&lang=pt&lat="+latitude+"&lon="+longitude+"&appid="+ChaveApi;
     fetch(requisicaoJson)
     .then(res => res.json())
     .then((out) => {
-
-    latitude.innerText = (out['coord'].lat);
-    longitude.innerText = (out['coord'].lon);
-    visibilidade.innerText = (out['visibility']/1000);
-    umidade.innerText = (out['main'].humidity);
-    description.innerText = (out.weather[0].description);
-    pressao.innerText = (out['main'].pressure);
-    temperatura.innerText = parseFloat((out['main'].temp).toFixed(0));
-    velocidade.innerText = parseFloat((out['wind'].speed * 3.6).toFixed(0));
-    local.innerText = cidade;
-    icone.src = ("https://openweathermap.org/img/wn/"+out.weather[0].icon+"@2x.png");
+      //console.log(out);
+    document.getElementById('lat').innerText = (out['coord'].lat);
+    document.getElementById('long').innerText = (out['coord'].lon);
+    document.getElementById('visibilidade').innerText = (out['visibility']/1000);
+    document.getElementById('umidade').innerText = (out['main'].humidity);
+    document.getElementById('description').innerText = (out.weather[0].description);
+    document.getElementById('pressao').innerText = (out['main'].pressure);
+    document.getElementById('temp').innerText = parseFloat((out['main'].temp).toFixed(0));
+    document.getElementById('velocidade').innerText = parseFloat((out['wind'].speed * 3.6).toFixed(0));
+    document.getElementById('cidade').innerText = cidade;
+    document.getElementById('icone').src = ("https://openweathermap.org/img/wn/"+out.weather[0].icon+"@2x.png");
     document.getElementById('vento').style.transform = "rotate("+out['wind'].deg+"deg)";
+    document.getElementById('nascer').innerText = (new Date(out['sys'].sunrise * 1000).toLocaleTimeString("pt-BR", {timeStyle: 'short'}));
+    document.getElementById('por').innerText = (new Date(out['sys'].sunset * 1000).toLocaleTimeString("pt-BR", {timeStyle: 'short'}));
 
 });

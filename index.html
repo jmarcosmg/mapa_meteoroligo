@@ -6,21 +6,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <header>
 
-  <nav class="navbar navbar-light bg-light">
+  <nav class="cabecalho">
    <div class="container">
-  <form class="form-inline">
+  <div class="form">
     <input onkeyup="busca()" name="cidade" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" id="busca-cidade">
     <ul id="sugestao" class="oculto">
            
     </ul>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-  </form>
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
 
 </div>
 </nav>
@@ -38,12 +39,16 @@
         <div class="col-4 temp">Pressão:<br> <i class="fa-solid fa-earth-americas"></i> <span id="pressao"></span>MB</div>
         <div class="col-4 temp">Umidade:<br> <i class="fa-solid fa-droplet"></i> <span id="umidade"></span>%</div>
         <div class="col-4 temp">Visibilidade:<br> <i class="fa-solid fa-eye"></i> <span id="visibilidade"></span>KM</div>
-        <div class="col-6 temp">Vento:<br> <img id="vento" src="img/vento.svg"> <span id="velocidade"></span> KM/H</div>
-        <div class="col-6 temp"><i class="fa-sharp fa-solid fa-map-location-dot"></i>: Lat. <span id="lat"></span><br> Long: <span id="long"></span></div>
+        <div class="col-4 temp">Vento:<br> <img id="vento" src="img/vento.svg"> <span id="velocidade"></span> KM/H</div>
+        <div class="col-4 temp"><i class="fa-sharp fa-solid fa-map-location-dot"></i> Lat. <span id="lat"></span><br> Lon: <span id="long"></span></div>
+        <div class="col-4 temp">N/P do sol:<br> <i class="fa-solid fa-sun"></i> <span id="nascer"></span> <i class="fa-solid fa-moon"></i> <span id="por"></span></div>
       </div>
     </div>
-      <div class="col-lg-6">
+      <div class="col-lg-6 mapa">
            <div id="mapa"> </div>
+           <div class="scala">
+             <div class="scale-details"><div>Temperatura, °C</div><div class="scale-gradient" style="width: 260px;"><div class="scale-dividers"><div>-40</div><div>-20</div><div>0</div><div>20</div><div>40</div></div><div class="horizontal-gradient-line" style="background-image: linear-gradient(to right, rgb(159, 85, 181) 0%, rgb(44, 106, 187) 8.75%, rgb(82, 139, 213) 12.5%, rgb(103, 163, 222) 18.75%, rgb(142, 202, 240) 25%, rgb(155, 213, 244) 31.25%, rgb(172, 225, 253) 37.5%, rgb(194, 234, 255) 43.75%, rgb(255, 255, 208) 50%, rgb(254, 248, 174) 56.25%, rgb(254, 232, 146) 62.5%, rgb(254, 226, 112) 68.75%, rgb(253, 212, 97) 75%, rgb(244, 168, 94) 82.5%, rgb(244, 129, 89) 87.5%, rgb(244, 104, 89) 93.75%, rgb(244, 76, 73) 100%);"></div></div></div>
+           </div>
       </div>
     </div>
  </div>
@@ -54,14 +59,18 @@
     <!-- Section: Social media -->
     <section>
       <!-- Facebook -->
-      <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/jeferson.marcos.5477" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Instagram -->
-      <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/jefersonmarcosnunes/" role="button"
         ><i class="fab fa-instagram"></i
       ></a>
+            <!-- GitHub -->
+      <a target="_blank" class="btn btn-outline-light btn-floating m-1" href="https://github.com/jmarcosmg" role="button"
+        ><i class="fab fa-github"></i
+      ></a> 
 
     </section>
     <!-- Section: Social media -->
