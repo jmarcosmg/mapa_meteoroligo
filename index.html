@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Mapa meteorológico com javascript</title>
+  <!-- Bootstrap 4.0 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+   <!-- Folha de estilo do mapa leaflet --> 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+     <!-- Folha de estilo local --> 
   <link rel="stylesheet" type="text/css" href="css/style.css">
+     <!-- CDN de icones font-awesome --> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- *************** --> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+   <!-- Cabeçalho --> 
 <header>
 
   <nav class="cabecalho">
@@ -27,10 +32,12 @@
 </nav>
 
 </header>
+   <!-- Corpo das informações --> 
 <main>
   <div class="container">
     <h1 class="text-center text-white text-uppercase title">Clima agora em <span id="cidade"></span></h1>
     <div class="row">
+        <!-- Informações de clima -->
       <div class="col-lg-6 dados">
         
         <div class="row">
@@ -44,8 +51,11 @@
         <div class="col-4 temp">N/P do sol:<br> <i class="fa-solid fa-sun"></i> <span id="nascer"></span> <i class="fa-solid fa-moon"></i> <span id="por"></span></div>
       </div>
     </div>
+      <!-- mapa -->
       <div class="col-lg-6 mapa">
+          <!-- mapa -->
            <div id="mapa"> </div>
+             <!-- escala -->
            <div class="scala">
              <div class="scale-details"><div>Temperatura, °C</div><div class="scale-gradient" style="width: 260px;"><div class="scale-dividers"><div>-40</div><div>-20</div><div>0</div><div>20</div><div>40</div></div><div class="horizontal-gradient-line" style="background-image: linear-gradient(to right, rgb(159, 85, 181) 0%, rgb(44, 106, 187) 8.75%, rgb(82, 139, 213) 12.5%, rgb(103, 163, 222) 18.75%, rgb(142, 202, 240) 25%, rgb(155, 213, 244) 31.25%, rgb(172, 225, 253) 37.5%, rgb(194, 234, 255) 43.75%, rgb(255, 255, 208) 50%, rgb(254, 248, 174) 56.25%, rgb(254, 232, 146) 62.5%, rgb(254, 226, 112) 68.75%, rgb(253, 212, 97) 75%, rgb(244, 168, 94) 82.5%, rgb(244, 129, 89) 87.5%, rgb(244, 104, 89) 93.75%, rgb(244, 76, 73) 100%);"></div></div></div>
            </div>
@@ -53,6 +63,8 @@
     </div>
  </div>
 </main>
+
+   <!-- Rodapé modelo Bootstrap--> 
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->
   <div class="container p-1 pb-0">
@@ -83,7 +95,9 @@
   </div>
   <!-- Copyright -->
 </footer>
+  <!-- Javascript de carregamento dos mapas -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+      <!-- Javascript local -->
           <script type="text/javascript" src="js/retorno-de-cidade.js"></script>
     <script async type="text/javascript" src="js/mapa.js"></script>
         <script async type="text/javascript" src="js/busca-cidade.js"></script>
