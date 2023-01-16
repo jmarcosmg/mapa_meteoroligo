@@ -1,215 +1,195 @@
 /*Folha de estilo CSS*/
-
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    background: #440076;
+ body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     min-height: 100vh;
+     background: #440076;
 }
-
-#mapa {
-    width: 100%;
-    height: 50vh;
-    border-radius: 10px;
+ #mapa {
+     width: 100%;
+     height: 50vh;
+     border-radius: 10px;
 }
-
-#sugestao {
-    position: absolute;
-    background: #fff;
-    z-index: 9999;
-    max-height: 330px;
-    overflow-y: auto;
-    top: 50px;
-    border-radius: 5px;
-    list-style: none;
-    padding: 10px;
-    width: 45%;
+ #sugestao {
+     position: absolute;
+     background: #fff;
+     z-index: 9999;
+     max-height: 330px;
+     overflow-y: auto;
+     top: 50px;
+     border-radius: 5px;
+     list-style: none;
+     padding: 10px;
+     width: 45%;
 }
-
-#sugestao::-webkit-scrollbar {
-    display: none;
+ #sugestao::-webkit-scrollbar {
+     display: none;
 }
-
-#sugestao a {
-    color: #000;
-    text-transform: uppercase;
-    font-weight: 600;
+ #sugestao a {
+     color: #000;
+     text-transform: uppercase;
+     font-weight: 600;
 }
-
-#sugestao li {
-    margin-bottom: 8px;
+ #sugestao li {
+     margin-bottom: 8px;
 }
-
-
-
-.oculto{
-    display: none;
+ .oculto{
+     display: none;
 }
-
-.temp {
-    font-weight: 600;
-    margin-bottom: 25px;
-    font-size: 20px;
+ .temp {
+     font-weight: 600;
+     margin-bottom: 25px;
+     font-size: 20px;
 }
-
-#busca-cidade {
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: #fff;
+ #busca-cidade {
+     width: 100%;
+     background: transparent;
+     border: none;
+     color: #fff;
 }
-
-.form-inline {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
+ .form-inline {
+     display: flex;
+     width: 100%;
+     flex-direction: row;
+     align-items: center;
+     flex-wrap: nowrap;
 }
-
-.title {
-    font-size: 35px;
-    margin-bottom: 30px;
+ .title {
+     font-size: 35px;
+     margin-bottom: 30px;
 }
-
-.dados {
-    background: url(../img/lightning-gc513bbb1d_640.jpg);
-    display: flex;
-    align-items: center;
-    color: #fff;
-    border-radius: 10px;
-    background-size: cover;
-    background-repeat: no-repeat;
+ .dados {
+     background: url(../img/lightning-gc513bbb1d_640.jpg);
+     display: flex;
+     align-items: center;
+     color: #fff;
+     border-radius: 10px;
+     background-size: cover;
+     background-repeat: no-repeat;
 }
-
-.dados:before {
-    content: "";
-    background: #000000a6;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+ .dados:before {
+     content: "";
+     background: #000000a6;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     border-radius: 10px;
 }
-
-.clima {
-    font-size: 35px;
+ .clima {
+     font-size: 35px;
 }
-
-#description {text-transform: capitalize;}
-
-.centro {
-    display: flex;
-    align-items: center;
+ #description {
+    text-transform: capitalize;
 }
-
-#vento {
-    width: 15px;
-}  .fa-lg{
-    font-size:1.3333333333333333em;
-    line-height:.75em;
-    vertical-align:-15%
+ .centro {
+     display: flex;
+     align-items: center;
 }
-
-.scala {
-    display: flex;
-    left: 25px;
-    position: absolute;
-    z-index: 99999;
-    bottom: 25px;
+ #vento {
+     width: 15px;
 }
-
-.scale-details{
-    color:#48484a;
-    height:20pt;
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    -ms-flex-align:center;
-    align-items:center;
-    padding:2pt 4pt;
-    background-color:#fff;
-    -webkit-border-radius:4pt;
-    border-radius:4pt;
-    -webkit-box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-    box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
-    -webkit-transition:-webkit-box-shadow .1s ease-out;
-    -o-transition:box-shadow .1s ease-out;
-    transition:box-shadow .1s ease-out;
-    transition:box-shadow .1s ease-out,-webkit-box-shadow .1s ease-out;
-    margin-bottom:10px;
-    -webkit-box-pack:justify;
-    -webkit-justify-content:space-between;
-    -ms-flex-pack:justify;
-    justify-content:space-between;
-    font-size:10px
+ .fa-lg{
+     font-size:1.3333333333333333em;
+     line-height:.75em;
+     vertical-align:-15% 
 }
-.scale-details:only-child{
-    margin-bottom:0
+ .scala {
+     display: flex;
+     left: 25px;
+     position: absolute;
+     z-index: 99999;
+     bottom: 25px;
 }
-.scale-details>div:first-child{
-    width:80px;
-    white-space:nowrap;
-    font-size:10px
+ .scale-details{
+     color:#48484a;
+     height:20pt;
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-ms-flexbox;
+     display:flex;
+     -webkit-box-align:center;
+     -webkit-align-items:center;
+     -ms-flex-align:center;
+     align-items:center;
+     padding:2pt 4pt;
+     background-color:#fff;
+     -webkit-border-radius:4pt;
+     border-radius:4pt;
+     -webkit-box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+     box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);
+     -webkit-transition:-webkit-box-shadow .1s ease-out;
+     -o-transition:box-shadow .1s ease-out;
+     transition:box-shadow .1s ease-out;
+     transition:box-shadow .1s ease-out,-webkit-box-shadow .1s ease-out;
+     margin-bottom:10px;
+     -webkit-box-pack:justify;
+     -webkit-justify-content:space-between;
+     -ms-flex-pack:justify;
+     justify-content:space-between;
+     font-size:10px 
 }
-.scale-dividers,.scale-gradient{
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    display:flex
+ .scale-details:only-child{
+     margin-bottom:0 
 }
-.scale-gradient{
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-    -ms-flex-direction:column;
-    flex-direction:column
+ .scale-details>div:first-child{
+     width:80px;
+     white-space:nowrap;
+     font-size:10px 
 }
-.scale-dividers{
-    width:100%;
-    -webkit-box-pack:justify;
-    -webkit-justify-content:space-between;
-    -ms-flex-pack:justify;
-    justify-content:space-between
+ .scale-dividers,.scale-gradient{
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-ms-flexbox;
+     display:flex 
 }
-.horizontal-gradient-line{
-    -webkit-border-radius:4pt;
-    border-radius:4pt;
-    height:4px;
-    opacity:.9;
-    width:260px;
-    border-left:1px solid #f2f2f2;
-    border-bottom:1px solid #f2f2f2
+ .scale-gradient{
+     -webkit-box-orient:vertical;
+     -webkit-box-direction:normal;
+     -webkit-flex-direction:column;
+     -ms-flex-direction:column;
+     flex-direction:column 
 }
-
-.form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
-    border: 1px solid #fff;
-    border-radius: 100px;
-    padding: 0 15px 0 0;
-    color: #fff;
+ .scale-dividers{
+     width:100%;
+     -webkit-box-pack:justify;
+     -webkit-justify-content:space-between;
+     -ms-flex-pack:justify;
+     justify-content:space-between 
 }
-
-.cabecalho {
-    margin: 15px 0 25px 0;
+ .horizontal-gradient-line{
+     -webkit-border-radius:4pt;
+     border-radius:4pt;
+     height:4px;
+     opacity:.9;
+     width:260px;
+     border-left:1px solid #f2f2f2;
+     border-bottom:1px solid #f2f2f2 
 }
-
-#busca-cidade:focus {box-shadow: none;}
-
-#busca-cidade::placeholder {
-    color: #fff;
+ .form {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     flex-wrap: nowrap;
+     border: 1px solid #fff;
+     border-radius: 100px;
+     padding: 0 15px 0 0;
+     color: #fff;
 }
-@media screen and (max-width: 991px){
-    .mapa{
-        padding: 0;
-        margin: 20px 0;
+ .cabecalho {
+     margin: 15px 0 25px 0;
+}
+ #busca-cidade:focus {
+    box-shadow: none;
+}
+ #busca-cidade::placeholder {
+     color: #fff;
+}
+ @media screen and (max-width: 991px){
+     .mapa{
+         padding: 0;
+         margin: 20px 0;
     }
 }
